@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Logo from "../../../assets/logo.svg";
-import { NavItem } from "./type.ts";
+import { Navbar } from "../../../data/Navbar.ts";
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import { NavItem } from "./type.ts";
         <span class="font-bold text-2xl text-white">Skillhealth</span>
       </div>
       <div class="flex items-center flex-row gap-4 text-white font-bold">
-        <div v-for="(item, index) in NavItem" :key="item">
+        <div v-for="(item, index) in Navbar" :key="index">
           <span class="cursor-pointer">{{ item.name }}</span>
         </div>
       </div>

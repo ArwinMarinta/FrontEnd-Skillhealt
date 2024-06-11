@@ -1,23 +1,23 @@
-type Navbar = {
+type NavbarItem = {
   id: number;
   name: string;
   url: string;
 };
 
-export const Navbar: Navbar[] = [
+export const Navbar: NavbarItem[] = [
   {
     id: 1,
     name: "Home",
-    url: "",
+    url: "ss",
   },
   {
     id: 1,
     name: "Cari Dokter",
-    url: "",
+    url: "ss",
   },
   {
     id: 1,
     name: "Forum",
-    url: "",
+    url: "ss",
   },
 ];
