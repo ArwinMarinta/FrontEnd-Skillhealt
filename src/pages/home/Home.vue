@@ -1,11 +1,25 @@
-<script setup>
+<script lang="ts" up>
+import { defineComponent } from "vue";
 import DokterHome from "../../assets/dokter-home.svg";
 import { category } from "../../data/categori";
 import RumahSakitHome from "../../assets/hospital-home.svg";
+import { TopicForum } from "../../data/Forum.ts";
+// import CardForum from "../../components/card/CardForum.vue";
+
+export default defineComponent({
+  data() {
+    return {
+      DokterHome,
+      RumahSakitHome,
+      category,
+      TopicForum,
+    };
+  },
+});
 </script>
 
 <template>
-  <div class="flex flex-col w-full justify-center">
+  <div class="flex w-full justify-center">
     <div class="container">
       <section
         class="flex mt-8 flex-row bg-gradient-to-r rounded-lg from-[#A41818] to-[#cb9c9c]"
@@ -63,10 +77,29 @@ import RumahSakitHome from "../../assets/hospital-home.svg";
         </div>
       </section>
 
-      <section class="flex flex-col mt-8">
+      <section class="flex flex-col py-8">
         <h1 class="text-2xl font-bold">Hot Topic Forum</h1>
-        <div>Forum</div>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-4 mt-8">
+          <div v-for="(item, index) in TopicForum" :key="index">
+            <!-- <CardForum :item="item" /> -->
+            <div class="flex flex-col bg-GRAY01 py-4 px-4 h-full">
+              <span
+                :class="{
+                  'text-green-500 font-semibold': item.status === 'Sudah Terjawab',
+                  'text-red-500 font-semibold': item.status == 'Belum Terjawab',
+                }"
+                >{{ item.status }}</span
+              >
+
+              <span class="font-bold text-lg">{{ item.title }}</span>
+              <span class="mt-3"> from : {{ item.from }}</span>
+              <span> Dijawab : {{ item.answerFrom }}</span>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
 </template>
+
+<style scoped></style>

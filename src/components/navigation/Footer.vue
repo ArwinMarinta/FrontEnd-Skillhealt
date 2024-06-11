@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import Logo from "../../assets/logo.svg";
 import FB from "../../assets/Sosmed/fb.svg";
 import IG from "../../assets/Sosmed/ig.svg";
