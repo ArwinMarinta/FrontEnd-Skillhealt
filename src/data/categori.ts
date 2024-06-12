@@ -4,7 +4,7 @@ import PanggilAmbulan from "../assets/kategori/panggil-ambulan.svg";
 import ForumKonsultasi from "../assets/kategori/forum-konsultasi.svg";
 import CekJadwal from "../assets/kategori/cek-jadwal.svg";
 
-type Category = {
+export type Category = {
   id: number;
   name: string;
   image: any;

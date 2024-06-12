@@ -8,16 +8,16 @@ export const Navbar: NavbarItem[] = [
   {
     id: 1,
     name: "Home",
-    url: "ss",
+    url: "/",
   },
   {
     id: 1,
     name: "Cari Dokter",
-    url: "ss",
+    url: "/doctor",
   },
   {
     id: 1,
     name: "Forum",
-    url: "ss",
+    url: "/",
   },
 ];

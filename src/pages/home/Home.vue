@@ -1,21 +1,11 @@
-<script lang="ts" up>
-import { defineComponent } from "vue";
+<script lang="ts" setup>
+// import { defineComponent } from "vue";
 import DokterHome from "../../assets/dokter-home.svg";
 import { category } from "../../data/categori";
 import RumahSakitHome from "../../assets/hospital-home.svg";
 import { TopicForum } from "../../data/Forum.ts";
-// import CardForum from "../../components/card/CardForum.vue";
-
-export default defineComponent({
-  data() {
-    return {
-      DokterHome,
-      RumahSakitHome,
-      category,
-      TopicForum,
-    };
-  },
-});
+import CardForum from "../../components/card/CardForum.vue";
+import cardCategory from "../../components/card/CardCategori.vue";
 </script>
 
 <template>
@@ -30,11 +20,12 @@ export default defineComponent({
           <p class="lg:text-7xl">
             Bisa Atur Janji Temu Dokter Skilvul Hospital di SkilHealth
           </p>
-          <button
+          <RouterLink
+            to="/doctor"
             class="py-2 px-3 lg:py-4 lg:px-6 lg:text-lg max-w-fit bg-white text-RED01 font-bold rounded-lg"
           >
             Cari Dokter
-          </button>
+          </RouterLink>
         </div>
         <div class="w-[50%] lg:w-[30%] flex justify-end">
           <img :src="DokterHome" alt="" class="w-full" />
@@ -45,7 +36,8 @@ export default defineComponent({
         <h1 class="font-bold text-2xl lg:text-4xl">Apa yang kamu butuhkan?</h1>
         <div class="grid grid-cols-4 lg:grid-cols-5 gap-3 lg:gap-10 mt-4 lg:mt-8">
           <div v-for="(item, index) in category" :key="index">
-            <div class="flex flex-col h-full cursor-pointer">
+            <cardCategory :item="item" />
+            <!-- <div class="flex flex-col h-full cursor-pointer">
               <div
                 class="bg-RED01 p-4 lg:py-8 h-full flex justify-center items-center rounded-lg"
               >
@@ -54,7 +46,7 @@ export default defineComponent({
               <span class="font-semibold lg:font-bold text-center lg:mt-2">{{
                 item.name
               }}</span>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -66,11 +58,13 @@ export default defineComponent({
           <p class="text-white font-semibold text-base lg:text-5xl lg:w-[80%]">
             Skilvul Hospital Tersebar diseluruh indonesia
           </p>
-          <button
-            class="bg-white text-RED01 py-1 lg:py-3 lg:px-4 lg:font-bold px-2 max-w-fit rounded-lg font-semibold"
-          >
-            Cek Rumah Sakit
-          </button>
+          <RouterLink to="/hospital">
+            <button
+              class="bg-white text-RED01 py-1 lg:py-3 lg:px-4 lg:font-bold px-2 max-w-fit rounded-lg font-semibold"
+            >
+              Cek Rumah Sakit
+            </button>
+          </RouterLink>
         </div>
         <div class="w-[50%] lg:w-[40%]">
           <img :src="RumahSakitHome" alt="" class="lg:w-full" />
@@ -81,20 +75,7 @@ export default defineComponent({
         <h1 class="text-2xl font-bold">Hot Topic Forum</h1>
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-4 mt-8">
           <div v-for="(item, index) in TopicForum" :key="index">
-            <!-- <CardForum :item="item" /> -->
-            <div class="flex flex-col bg-GRAY01 py-4 px-4 h-full">
-              <span
-                :class="{
-                  'text-green-500 font-semibold': item.status === 'Sudah Terjawab',
-                  'text-red-500 font-semibold': item.status == 'Belum Terjawab',
-                }"
-                >{{ item.status }}</span
-              >
-
-              <span class="font-bold text-lg">{{ item.title }}</span>
-              <span class="mt-3"> from : {{ item.from }}</span>
-              <span> Dijawab : {{ item.answerFrom }}</span>
-            </div>
+            <CardForum :item="item" />
           </div>
         </div>
       </section>
