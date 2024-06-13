@@ -11,12 +11,12 @@ export const Navbar: NavbarItem[] = [
     url: "/",
   },
   {
-    id: 1,
+    id: 2,
     name: "Cari Dokter",
-    url: "/doctor",
+    url: "/search-doctor",
   },
   {
-    id: 1,
+    id: 3,
     name: "Forum",
     url: "/",
   },

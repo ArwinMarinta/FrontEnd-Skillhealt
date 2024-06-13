@@ -21,13 +21,13 @@ import cardCategory from "../../components/card/CardCategori.vue";
             Bisa Atur Janji Temu Dokter Skilvul Hospital di SkilHealth
           </p>
           <RouterLink
-            to="/doctor"
+            to="/search-doctor"
             class="py-2 px-3 lg:py-4 lg:px-6 lg:text-lg max-w-fit bg-white text-RED01 font-bold rounded-lg"
           >
             Cari Dokter
           </RouterLink>
         </div>
-        <div class="w-[50%] lg:w-[30%] flex justify-end">
+        <div class="w-[50%] lg:w-[30%]">
           <img :src="DokterHome" alt="" class="w-full" />
         </div>
       </section>
@@ -37,16 +37,6 @@ import cardCategory from "../../components/card/CardCategori.vue";
         <div class="grid grid-cols-4 lg:grid-cols-5 gap-3 lg:gap-10 mt-4 lg:mt-8">
           <div v-for="(item, index) in category" :key="index">
             <cardCategory :item="item" />
-            <!-- <div class="flex flex-col h-full cursor-pointer">
-              <div
-                class="bg-RED01 p-4 lg:py-8 h-full flex justify-center items-center rounded-lg"
-              >
-                <img :src="item.image" alt="{{item.name}}" class="lg:w-28 lg:h-28" />
-              </div>
-              <span class="font-semibold lg:font-bold text-center lg:mt-2">{{
-                item.name
-              }}</span>
-            </div> -->
           </div>
         </div>
       </section>

@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../pages/home/Home.vue";
 import Login from "../pages/login/Login.vue";
 import Hospital from "../pages/hospital/Hospital.vue";
-import Doctor from "../pages/doctor/Doctor.vue";
+import Doctor from "../pages/doctor/SearchDoctor.vue";
+import Ambulance from "../pages/ambulance/Ambulance.vue";
 import "../style.css";
 // import Register from "@/pages/register/Register.vue";
 
@@ -20,8 +21,12 @@ const routes = [
     component: Hospital,
   },
   {
-    path: "/doctor",
+    path: "/search-doctor",
     component: Doctor,
+  },
+  {
+    path: "/ambulance",
+    component: Ambulance,
   },
 ];
 
