@@ -10,7 +10,7 @@ import AmbulanceDarurat from "../assets/ambulan/darurat.svg";
 export type Category = {
   id: number;
   name: string;
-  image: string
+  image: string;
   url: string;
 };
 
@@ -37,7 +37,7 @@ export const category: Category[] = [
     id: 4,
     name: "Forum Konsultasi",
     image: ForumKonsultasi,
-    url: "",
+    url: "/discussion",
   },
   {
     id: 5,

@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,vue,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,vue,tsx}",
+    "./node_modules/flowbite/**/*.js",
+    "node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx,vue}",
+  ],
   theme: {
     extend: {
       container: {
@@ -24,5 +29,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

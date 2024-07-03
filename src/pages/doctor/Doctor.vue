@@ -23,7 +23,7 @@ onMounted(() => {
 
 <template>
   <div class="flex justify-center w-full py-10">
-    <div class="container grid grid-cols-3 gap-6">
+    <div class="container grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
       <div v-for="(item, index) in doctors" :key="index">
         <CardDoctor :item="item" />
       </div>

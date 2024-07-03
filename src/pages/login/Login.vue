@@ -13,20 +13,22 @@ import Logo from "../../assets/logo.svg";
 
           <span class="text-center">Skillhealth!</span>
         </h1>
-        <img :src="Logo" alt="Skillhealth" />
+        <img :src="Logo" alt="Skillhealth" class="h-24" />
         <form class="flex flex-col gap-4">
           <div>
             <label>Username / Email</label>
             <input
               type="text"
-              class="border-2 mt-2 w-full py-3 px-4 rounded-lg border-black"
+              className=" w-full mt-2 sm:inline text-black  md:w-full py-1.5 pr-12 pl-4 border-0 outline-none rounded-md   focus:outline-none 
+                                        ring-2  ring-gray-700/50 focus:ring-RED01 duration-200"
             />
           </div>
           <div>
             <label>Password</label>
             <input
               type="password"
-              class="border-2 mt-2 w-full py-3 px-4 rounded-lg border-black"
+              className=" w-full mt-2 sm:inline text-black  md:w-full py-1.5 pr-12 pl-4 border-0 outline-none rounded-md   focus:outline-none 
+                                        ring-2  ring-gray-700/50 focus:ring-RED01 duration-200"
             />
           </div>
           <div class="flex flex-row justify-between items-center">
@@ -36,9 +38,11 @@ import Logo from "../../assets/logo.svg";
             </section>
             <div>Lupa Password ?</div>
           </div>
-          <button class="w-full py-3 px-2 bg-RED01 rounded-lg text-white font-bold">
-            Login
-          </button>
+          <div class="mt-4">
+            <button class="w-full py-2 px-2 bg-RED01 rounded-lg text-white font-bold">
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </div>

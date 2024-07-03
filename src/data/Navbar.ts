@@ -18,6 +18,6 @@ export const Navbar: NavbarItem[] = [
   {
     id: 3,
     name: "Forum",
-    url: "/",
+    url: "/discussion",
   },
 ];

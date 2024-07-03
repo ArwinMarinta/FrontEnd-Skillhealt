@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { defineProps } from "vue";
-import { Category } from "@/data/categori";
+import { Category } from "../../data/categori";
 
 const props = defineProps<{
   item: Category;

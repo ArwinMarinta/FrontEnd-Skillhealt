@@ -11,7 +11,7 @@ const props = defineProps<{
 <template>
   <RouterLink
     :to="`/detail/doctor/${item.id}`"
-    class="flex flex-row bg-GRAY01 rounded-md py-4 px-4 gap-6 cursor-pointer"
+    class="flex flex-row bg-GRAY01 rounded-md py-4 px-4 gap-6 cursor-pointer h-full"
   >
     <div>
       <img :src="Doctor" alt="Dokter" />

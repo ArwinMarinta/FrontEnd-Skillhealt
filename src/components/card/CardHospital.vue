@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import HospitalImage from "../../assets/hospital-search.svg";
-import { defineProps } from "vue/dist/vue.js";
+import { defineProps } from "vue";
 import { HospitalType } from "../../types/Hospital.ts";
 
 const props = defineProps<{

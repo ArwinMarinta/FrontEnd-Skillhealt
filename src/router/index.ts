@@ -6,6 +6,8 @@ import Doctor from "../pages/doctor/SearchDoctor.vue";
 import Ambulance from "../pages/ambulance/Ambulance.vue";
 import ListDoctor from "../pages/doctor/Doctor.vue";
 import DetailDoctor from "../pages/doctor/DetailDoctor.vue";
+import Discussion from "../pages/discussion/Discussion.vue";
+import DetailDiscussion from "../pages/discussion/DetailDiscussion.vue";
 import "../style.css";
 // import Register from "@/pages/register/Register.vue";
 
@@ -37,6 +39,14 @@ const routes = [
   {
     path: "/detail/doctor/:id",
     component: DetailDoctor,
+  },
+  {
+    path: "/discussion",
+    component: Discussion,
+  },
+  {
+    path: "/detail/discussion/:id",
+    component: DetailDiscussion,
   },
 ];
 
