@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 import Logo from "../../../assets/logo.svg";
 import { Navbar } from "../../../data/Navbar.ts";
+import { useCookies } from "vue3-cookies";
+import { ref, onMounted } from "vue";
+
+const { cookies } = useCookies();
+
+const token = ref<string>("");
+
+onMounted(() => {
+  const tokens = cookies.get("token");
+
+  if (tokens) {
+    token.value = tokens;
+  }
+});
 </script>
 
 <template>
@@ -10,10 +24,18 @@ import { Navbar } from "../../../data/Navbar.ts";
         <img :src="Logo" alt="logo" class="w-10" />
         <span class="font-bold text-2xl text-white">Skillhealth</span>
       </RouterLink>
+
       <div class="flex items-center flex-row gap-4 text-white font-bold">
         <div v-for="(item, index) in Navbar" :key="index">
           <RouterLink :to="item.url" class="cursor-pointer">{{ item.name }}</RouterLink>
         </div>
+        <RouterLink to="/login" v-if="!token">
+          <button
+            class="py-[6px] px-3 bg-white text-RED01 rounded-md flex items-center justify-center"
+          >
+            Masuk
+          </button>
+        </RouterLink>
       </div>
     </div>
   </div>

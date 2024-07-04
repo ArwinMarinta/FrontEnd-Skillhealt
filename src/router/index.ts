@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../pages/home/Home.vue";
 import Login from "../pages/login/Login.vue";
+import Register from "../pages/register/Register.vue";
 import Hospital from "../pages/hospital/Hospital.vue";
 import Doctor from "../pages/doctor/SearchDoctor.vue";
 import Ambulance from "../pages/ambulance/Ambulance.vue";
@@ -19,6 +20,10 @@ const routes = [
   {
     path: "/login",
     component: Login,
+  },
+  {
+    path: "/register",
+    component: Register,
   },
   {
     path: "/hospital",
