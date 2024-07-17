@@ -19,7 +19,7 @@ export const category: Category[] = [
     id: 1,
     name: "Janji Temu Dokter",
     image: JanjiTemuDokter,
-    url: "/search-doctor",
+    url: "doctor/search",
   },
   {
     id: 2,

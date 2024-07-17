@@ -13,7 +13,7 @@ export const Navbar: NavbarItem[] = [
   {
     id: 2,
     name: "Cari Dokter",
-    url: "/search-doctor",
+    url: "/doctor/search",
   },
   {
     id: 3,

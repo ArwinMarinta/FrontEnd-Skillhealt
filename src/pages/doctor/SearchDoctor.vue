@@ -87,7 +87,7 @@ import { Days } from "../../data/FormSearchDocter";
               <select
                 className=" h-full w-full rounded-md bg-transparent  py-2 px-2 ring-2  ring-gray-600 focus:ring-YELLOW05"
               >
-                <option value="" disabled hidden>Pilih Metode</option>
+                <option value="" hidden>Pilih Metode</option>
                 <option value="{true}">Senin</option>
                 <option value="{false}">Selasa</option>
               </select>
