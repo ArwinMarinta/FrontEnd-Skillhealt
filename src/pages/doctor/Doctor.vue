@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex justify-center w-full py-10">
+  <div class="flex justify-center w-full py-10 min-h-screen">
     <div class="container flex flex-col">
       <div class="w-full shadow-lg border border-GRAY02 py-6 px-4 rounded-md flex-col">
         <div class="flex w-full md:flex-row flex-col">

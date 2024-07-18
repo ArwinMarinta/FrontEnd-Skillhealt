@@ -25,7 +25,7 @@ export const category: Category[] = [
     id: 2,
     name: "Cek Rekam Medis",
     image: CekRekamMedis,
-    url: "",
+    url: "/medical-record",
   },
   {
     id: 3,

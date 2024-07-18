@@ -16,7 +16,7 @@ function showModal() {
 </script>
 
 <template>
-  <div class="w-full flex justify-center">
+  <div class="w-full flex justify-center min-h-screen">
     <div class="container py-10 flex">
       <div
         class="lg:w-[30%] hidden lg:block self-start sticky top-[100px] right-0 left-0 z-[99999]"

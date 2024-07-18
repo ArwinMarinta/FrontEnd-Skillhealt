@@ -9,6 +9,7 @@ import ListDoctor from "../pages/doctor/Doctor.vue";
 import DetailDoctor from "../pages/doctor/DetailDoctor.vue";
 import Discussion from "../pages/discussion/Discussion.vue";
 import DetailDiscussion from "../pages/discussion/DetailDiscussion.vue";
+import MedicalRecord from "../pages/medical/Medical_Record.vue";
 import "../style.css";
 // import Register from "@/pages/register/Register.vue";
 
@@ -52,6 +53,10 @@ const routes = [
   {
     path: "/detail/discussion/:id",
     component: DetailDiscussion,
+  },
+  {
+    path: "/medical-record",
+    component: MedicalRecord,
   },
 ];
 

@@ -14,12 +14,8 @@ const Doctor = ref();
 const fetchData = async (id: number) => {
   try {
     const response = await axios.get(`http://localhost:4000/doctors/${id}`);
-    const { data } = response.data;
 
-    const datas = { data };
-
-    console.log(datas);
-    Doctor.value = datas;
+    Doctor.value = response.data.data;
   } catch (error) {
     console.error("Failed to load data:", error);
   }

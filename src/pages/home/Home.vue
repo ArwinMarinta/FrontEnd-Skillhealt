@@ -21,7 +21,7 @@ import cardCategory from "../../components/card/CardCategori.vue";
             Bisa Atur Janji Temu Dokter Skilvul Hospital di SkilHealth
           </p>
           <RouterLink
-            to="/search-doctor"
+            to="/doctor/search"
             class="py-2 px-3 lg:py-4 lg:px-6 lg:text-lg max-w-fit bg-white text-RED01 font-bold rounded-lg"
           >
             Cari Dokter
